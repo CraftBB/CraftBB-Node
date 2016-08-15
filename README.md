@@ -15,7 +15,8 @@ ___
 - [ ] User ranks / badges
 - [ ] Utilise Imgur API for posting images on topics
 - [ ] Like / Dislike topics & comments
-- [ ] User profiles with comments
+- [x] User profiles 
+- [ ] User comments on profile pages
 - [x] Jade templates
 - [ ] Customisable home page 
 
