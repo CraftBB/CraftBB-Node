@@ -1,0 +1,15 @@
+.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      button(type="button", data-toggle="collapse", data-target="#navbar").navbar-toggle.collapsed
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a(href=website.domain).navbar-brand= website.name
+    .collapse.navbar-collapse#navbar
+      ul.nav.navbar-nav
+        li: a(href=website.domain) Home
+        li: a(href=website.domain + "discuss") Discuss
+      ul.nav.navbar-nav.navbar-right
+        li: a(href=website.domain + "profile/SeanMe") SeanMe
+        li: a(href=website.domain + "login", data-target="#login", data-toggle="modal") Login / Register

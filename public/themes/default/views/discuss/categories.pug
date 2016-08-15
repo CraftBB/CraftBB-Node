@@ -1,0 +1,13 @@
+extends ../partials/layout
+
+block content
+  ol.breadcrumb
+    li: a(href=website.domain) Home
+    li.active Discuss 
+  
+  .row.categories
+    .col-md-4
+      .panel.panel-default.category
+        a(href=website.domain + "discuss/category", style="background: #626c78").panel-body
+          h3.category-name Announcements
+          p.category-desc Latest news & announcements

@@ -1,0 +1,24 @@
+{
+  "name": "craftbb",
+  "version": "0.0.1",
+  "description": "A minecraft based bulletin board software written in NodeJS.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeanUsername/CraftBB.git"
+  },
+  "author": "Sean <me@sseann.com>",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "^4.5.8",
+    "pug": "^2.0.0-beta5"
+  },
+  "bugs": {
+    "url": "https://github.com/SeanUsername/CraftBB/issues"
+  },
+  "homepage": "https://github.com/SeanUsername/CraftBB#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT"
+}

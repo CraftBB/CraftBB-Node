@@ -1,0 +1,20 @@
+{
+  "website": {
+    "name": "CraftBB",
+    "server": "play.craftbb.net",
+    "admin": "629f2895b61842cfa8b47b7cabd738c7",
+    "theme": "default",
+    "domain": "Domain name with HTTP(s):// and trailing slash",
+    "language": "english"
+  },
+  "server": {
+    "port": "8080"
+  },
+  "database": {
+    "host": "",
+    "port": "",
+    "name": "",
+    "user": "",
+    "pass": ""
+  }
+}

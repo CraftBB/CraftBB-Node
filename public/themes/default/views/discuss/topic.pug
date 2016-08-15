@@ -1,0 +1,12 @@
+extends ../partials/layout
+
+block content
+  ol.breadcrumb
+    li: a(href=website.domain) Home
+    li: a(href=website.domain + "discuss") Discuss 
+    li: a(href=website.domain + "discuss/category") Category 
+    li.active Topic
+    
+  .discussion.text-center
+    h3.badge(style="background: #626c78") Announcements
+    h2.title Welcome to CraftBB
