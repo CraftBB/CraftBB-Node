@@ -5,7 +5,7 @@ const Category = require('../models/category')
 const Topic = require('../models/topic')
 
 router.get('/', function (req, res) {
-  res.render('discuss/categories')
+  res.render('discuss/index')
 })
 
 router.get('/:category', function (req, res) {
