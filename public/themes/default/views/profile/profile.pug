@@ -1,0 +1,33 @@
+.panel.panel-default
+  .panel-body
+    .item UUID 
+      span.label.label-info= user.uuid
+    .item Title 
+      span.label.label-info= user.title
+    .item Status 
+      span.label.label-info= user.status
+    .item Signature 
+      span.label.label-info= user.signature
+    .item Rank 
+      span.label.label-info= user.rank
+    .item Last Login 
+      span.label.label-info= user.last_login
+    .item Joined 
+      span.label.label-info= user.joined
+    .item Online 
+      span.label.label-info= user.online
+    .item Banner 
+      span.label.label-info= user.banner
+    .item Gender 
+      span.label.label-info= user.gender
+    .item Location  
+      span.label.label-info= user.location
+    .item Birthday  
+      span.label.label-info= user.birthday
+    .item IP Current 
+      span.label.label-info= user.ip.current
+    .item IP Previous 
+      span.label.label-info= user.ip.previous
+    .item IP History 
+      each ip in user.ip.history
+        span.label.label-info= ip 
