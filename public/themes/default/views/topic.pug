@@ -1,0 +1,12 @@
+extends partials/layout
+
+block content
+  ol.breadcrumb
+    li: a(href=website.domain) Home
+    li: a(href=website.domain + "discuss") Discuss 
+    li: a(href=website.domain + "discuss/" + category_slug)= category_name 
+    li.active= page
+    
+  .discussion.text-center
+    h3.badge(style="background: #626c78")= category_name
+    h2.title= topic.title

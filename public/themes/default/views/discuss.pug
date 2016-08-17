@@ -1,0 +1,18 @@
+extends partials/layout
+
+block content
+  ol.breadcrumb
+    li: a(href=website.domain) Home
+    li.active= page
+
+  if !categories
+    .alert.alert-info There are currently no categories setup
+  else
+    .row.categories
+      each category in categories
+        .col-md-4
+          .panel.panel-default.category
+            a(href=website.domain + "discuss/" + category.slug, style="background: " + category.color).panel-body
+              h3.category-name= category.name
+              p.category-desc= category.description
+        

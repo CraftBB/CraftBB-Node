@@ -1,0 +1,19 @@
+extends partials/layout
+
+block content
+  ol.breadcrumb
+    li: a(href=website.domain) Home
+    li: a(href=website.domain + "discuss") Discuss 
+    li.active= page
+    
+  if !topics
+    .alert.alert-info There are currently no topics in this category
+  else
+    .list-group.topics
+      each topic in topics
+        .list-group-item.clearfix
+            a(href=website.domain + "profile/" + topic.author).author
+              img(src="https://crafatar.com/avatars/" + topic.author + "?size=40")
+            a(href=website.domain + "discuss/" + category + "/" + topic.slug).topic
+              h4.topic-title= topic.title
+              p.topic-preview= topic.body
