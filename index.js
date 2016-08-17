@@ -1,36 +1,38 @@
 'use strict'
 
 const express = require('express')
-const settings = require('./settings.json')
 const database = require('mongoose')
-const craft = express()
+const parser = require('body-parser')
+const cookie = require('cookie-parser')
+const settings = require('./settings.json')
+const app = express()
 
-const db = settings.database
+database.connect(settings.database)
 
-database.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name)
+app.engine('pug', require('pug').__express)
 
-craft.engine('pug', require('pug').__express)
+app.set('view engine', 'pug')
+app.set('views', 'public/themes/' + settings.website.theme + '/views')
+app.set('secret', settings.server.secret)
 
-craft.set('view engine', 'pug')
+app.use('/avatar', express.static('public/avatars'))
+app.use('/assets', express.static('public/themes/' + settings.website.theme + '/assets'))
+app.use(cookie())
+app.use(require('./source/middleware'))
+app.use(require('./source/controllers'))
+app.use(parser.json())
+app.use(parser.urlencoded({ extended: false }))
 
-craft.use('/avatar', express.static('public/avatars'))
-
-craft.use('/assets', express.static('public/themes/' + settings.website.theme + '/assets'))
-
-craft.set('views', 'public/themes/' + settings.website.theme + '/views')
-
-craft.locals.website = settings.website
-
-craft.locals.asset = {
+app.locals.website = settings.website
+app.locals.url = settings.website.domain
+app.locals.asset = {
   'css': settings.website.domain + 'assets/css/',
   'img': settings.website.domain + 'assets/img/',
   'js': settings.website.domain + 'assets/js/'
 }
 
-craft.locals.pretty = true
+app.locals.pretty = true
 
-craft.use(require('./source/controllers'))
-
-craft.listen(settings.server.port, function () {
+app.listen(settings.server.port, function () {
   console.info('Listening on port: ' + settings.server.port)
 })

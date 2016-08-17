@@ -24,4 +24,3 @@ ___
 - [ ] User management
 - [ ] Statistics page
 - [ ] General forum management features
-

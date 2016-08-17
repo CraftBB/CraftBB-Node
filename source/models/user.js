@@ -27,5 +27,4 @@ const userSchema = new Schema({
 
 const User = database.model('User', userSchema)
 
-
 module.exports = User

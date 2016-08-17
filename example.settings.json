@@ -8,13 +8,8 @@
     "language": "english"
   },
   "server": {
-    "port": "8080"
+    "port": "8080",
+    "secret": "randomsecretstring"
   },
-  "database": {
-    "host": "",
-    "port": "",
-    "name": "",
-    "user": "",
-    "pass": ""
-  }
+  "database": "mongodb://<username>:<password>@<host>:<port>/<name>"
 }
